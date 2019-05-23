@@ -20,20 +20,18 @@ section{
 	min-height: 600px;
 	margin-top: 2rem;
 	outline: 1px solid red;
-
-
 }
 
 .wrapper{
 	max-width: 600px;
 	margin: auto;
 	outline: 1px solid blue;
-
 }
 
 .row{
 	width: 100%;
-
+	position: relative;
+height: 600px;
 }
 
 .col{
@@ -43,16 +41,49 @@ section{
 
 .electric-purple{
 	background: #C200FB;
+	position: absolute;
+  top: 0;
+	right:0;
+	z-index: 2;
 }
 
 .raspberry{
 	background: #EC0868;
-}
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 4;
+	transition: 1s all ease;
+	}
+
+	.raspberry:hover{
+		background: green;
+		right: 100px;
+		top: 100px;
+			}
 
 .ferrari-red{
 	background: #FC2F00;
+	position: absolute;
+  top: 0;
+	right:0;
+	z-index: 3;
+	transform: 2s all ease;
 }
 
 .black{
 	background: #000;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	transition: 1s all ease;
+}
+.black:hover{
+	height: 400px;
+			}
+
+.row:hover .ferrari-red{
+top:200px;
+
 }
